@@ -1,0 +1,145 @@
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita
+$ git config --global user.name ganeshdhatsan
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita
+$ git config --global user.email ganeshdhatsan@gmail.com
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita
+$ git init
+Initialized empty Git repository in C:/Users/admin/Ganesh/Anvita/.git/
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (master)
+$ git branch ganesh
+fatal: not a valid object name: 'master'
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (master)
+$ git branch -M main
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+$ git add .
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .classpath
+        new file:   .project
+        new file:   .settings/org.eclipse.jdt.core.prefs
+        new file:   .settings/org.eclipse.m2e.core.prefs
+        new file:   pom.xml
+        new file:   src/test/java/REGISTER/Registar.java
+        new file:   target/classes/META-INF/MANIFEST.MF
+        new file:   target/classes/META-INF/maven/GITPractice/GITPractice/pom.properties
+        new file:   target/classes/META-INF/maven/GITPractice/GITPractice/pom.xml
+        new file:   target/test-classes/REGISTER/Registar.class
+
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+$ git commit -m"new code commited"
+[main (root-commit) af19797] new code commited
+ 10 files changed, 168 insertions(+)
+ create mode 100644 .classpath
+ create mode 100644 .project
+ create mode 100644 .settings/org.eclipse.jdt.core.prefs
+ create mode 100644 .settings/org.eclipse.m2e.core.prefs
+ create mode 100644 pom.xml
+ create mode 100644 src/test/java/REGISTER/Registar.java
+ create mode 100644 target/classes/META-INF/MANIFEST.MF
+ create mode 100644 target/classes/META-INF/maven/GITPractice/GITPractice/pom.properties
+ create mode 100644 target/classes/META-INF/maven/GITPractice/GITPractice/pom.xml
+ create mode 100644 target/test-classes/REGISTER/Registar.class
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+$ git remote add origin git@github.com:ganeshdhatsan/Anvita.git
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+$ git push -u origin main
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+$ git push -u origin main
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+$ git remote add origin https://github.com/ganeshdhatsan/Anvita.git
+error: remote origin already exists.
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+$ git push -u origin main
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+$ ssh-keygen
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/admin/.ssh/id_ed25519):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/admin/.ssh/id_ed25519
+Your public key has been saved in /c/Users/admin/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:hq9EYA+NhBl6nDa8dH3K14DFPYRyIHuHOd/qAnkPFdo admin@DESKTOP-95BEDQV
+The key's randomart image is:
++--[ED25519 256]--+
+|  .+o .o.+.      |
+| +oo *.== o      |
+|. O B O=+. .     |
+| + = *.BE+       |
+|  .  .*.S o      |
+|    o.o+ .       |
+|     o.oo        |
+|     ..o.        |
+|      ...        |
++----[SHA256]-----+
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+$ ^C
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+$ cat ^C
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+$ cat /c/Users/admin/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPrO6xY/3fKr4aiLs395qGWsG9cE++7Qs6SMeCLXiWv3 admin@DESKTOP-95BEDQV
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+$ ^C
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+$ git push -u origin main
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (24/24), 3.05 KiB | 164.00 KiB/s, done.
+Total 24 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:ganeshdhatsan/Anvita.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita (main)
+^C
+
+admin@DESKTOP-95BEDQV MINGW64 ~/Ganesh/Anvita
+$

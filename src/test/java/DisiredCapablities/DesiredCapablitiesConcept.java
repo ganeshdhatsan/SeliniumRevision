@@ -104,8 +104,10 @@ public class DesiredCapablitiesConcept {
 		 * set those options as part of the DesiredCapabilities.
 		 */
 		ChromeOptions options = new ChromeOptions();
+		
 		options.addArguments("--start-maximized");
 		options.addArguments("--disable-notifications");
+		
 		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
 		/*

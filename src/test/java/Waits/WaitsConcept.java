@@ -14,6 +14,23 @@ import org.testng.annotations.Test;
 public class WaitsConcept {
 
 	WebDriver driver;
+	
+	/**
+	 * 
+ Wait means Selenium provides a default waiting time for WebDriver to find elements 
+ before throwing a NoSuchElementException.
+
+Implicitly waits applies globally to all findElement() and findElements() calls in the corresponding page.
+If the element is found within the specified time, 
+WebDriver proceeds next action without waiting for the full duration.
+If the element is not found, WebDriver polls the DOM repeatedly until the given time expires.
+
+Explicit Wait can be used for complex conditions, 
+such as waiting for specific elements to be visible, clickable or meet certain criteria.
+
+Recommendation: Prefer Explicit Wait because of more flexible and as it offers more control 
+and avoids unnecessary waiting compared to globally applied Implicit Wait.
+	 */
 
 	/**
 	 * Wait clasified mainly in to 2 types

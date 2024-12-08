@@ -18,12 +18,6 @@ import org.testng.annotations.Test;
 
 public class ActionsClass {
 
-	private void me() {
-		String given = "vuygj(njhbj(n m";
-		String ans = given.split("(")[1];
-
-	}
-
 	/**
 	 * 
 	 * Actions : Mouse Actions in Selenium:
@@ -125,7 +119,7 @@ public class ActionsClass {
 		driver.get("https://www.spicejet.com/");
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
-		////input[@id='ctl00_mainContent_ddl_originStation1_CTXT']
+		//// input[@id='ctl00_mainContent_ddl_originStation1_CTXT']
 		List<String> li = new ArrayList<String>();
 		/*
 		 * find the name of product of great indian festival
@@ -136,17 +130,17 @@ public class ActionsClass {
 			String text = webElement.getText();
 			li.add(text);
 		}
-		////a[@value='BLR']
+		//// a[@value='BLR']
 		/*
 		 * by the product name to finding the price of each product
 		 */
 		for (int i = 0; i < li.size(); i++) {
-			
+
 			String nameofpro = li.get(i);
 			System.out.println(nameofpro);
 			WebElement pricewebref = driver.findElement(
 					By.xpath("//span[text()='" + nameofpro + "']/following::span[@class='a-price-whole']"));
-				System.out.println(pricewebref.getText());
+			System.out.println(pricewebref.getText());
 		}
 
 	}
@@ -276,7 +270,33 @@ public class ActionsClass {
 		act.keyDown(Keys.SHIFT).sendKeys(username, "facebook").keyUp(Keys.SHIFT).perform();
 
 		act.sendKeys(password, "kumar" + Keys.ENTER).perform();
+		
+	}
+	
+	@Test
+	private void exampleForMethodOverLoadingInActionsClass() {
+		WebDriver driver = new ChromeDriver();
+
+		driver.get("https://www.facebook.com/");
+
+		WebElement username = driver.findElement(By.id("email"));
+
+		WebElement password = driver.findElement(By.id("pass"));
+
+		Actions act = new Actions(driver);
+
+		//Type-01 (WebElement + String)
+		act.sendKeys(username, "java").perform();
+		
+		//Type-02 (WebElement + String +Enum)
+		
+		act.sendKeys(password, "kumar" + Keys.ENTER).perform();
+		
+		//Type-03 without Actions Class (String)
+		
+		username.sendKeys("kumar");
 
 	}
 
+	
 }

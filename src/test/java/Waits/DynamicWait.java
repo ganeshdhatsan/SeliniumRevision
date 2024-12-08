@@ -2,12 +2,15 @@ package Waits;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.function.Function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DynamicWait {
@@ -189,6 +192,28 @@ public class DynamicWait {
 		ExpectedConditions.frameToBeAvailableAndSwitchToIt("");
 		ExpectedConditions.frameToBeAvailableAndSwitchToIt(element);
 		ExpectedConditions.frameToBeAvailableAndSwitchToIt(1);
+
+	}
+	private void fluentwaitConcept() {
+
+		WebElement element = driver.findElement(By.xpath(""));
+
+		// Fluent wait
+
+		// object creation
+
+		Wait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(20))
+				.pollingEvery(Duration.ofSeconds(2)).ignoring(Exception.class);
+
+		WebElement until = wait.until(new Function<WebDriver, WebElement>() {
+
+			public WebElement apply(WebDriver driver) {
+
+				return driver.findElement(By.xpath(""));
+			}
+
+		});
+		until.click();
 
 	}
 

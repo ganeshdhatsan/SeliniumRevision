@@ -112,9 +112,9 @@ private void handlePWC1() throws InterruptedException {
 		
 		String parentWindow = driver.getWindowHandle();
 		Set<String> windowHandles = driver.getWindowHandles();
-		for (String string : windowHandles) {
-			if(!string.equalsIgnoreCase(parentWindow)) {
-				driver.switchTo().window(string);
+		for (String singleWin : windowHandles) {
+			if(!singleWin.equals(parentWindow)) {
+				driver.switchTo().window(singleWin);
 				Thread.sleep(2000);
 				driver.findElement(By.xpath("(//button[@aria-label='Dismiss'])[2]")).click();
 			}

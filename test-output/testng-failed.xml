@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Actions_Selenium.ActionsClass">
+      <class name="Actions_Selenium.MakemyTrip">
         <methods>
-          <include name="method"/>
+          <include name="makemyTrip"/>
         </methods>
-      </class> <!-- Actions_Selenium.ActionsClass -->
+      </class> <!-- Actions_Selenium.MakemyTrip -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
